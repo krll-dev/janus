@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📄 Projekt-Dokumentation
+    url: https://github.com/krll-dev/janus#readme
+    about: Architektur, Setup und Tech-Stack im Überblick
+  - name: 🗺️ Projekt-Board
+    url: https://github.com/users/krll-dev/projects
+    about: Aktueller Sprint-/Backlog-Status
