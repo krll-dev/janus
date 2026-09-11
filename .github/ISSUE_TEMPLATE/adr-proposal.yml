@@ -2,7 +2,7 @@ name: "🏛️ ADR-Vorschlag"
 description: Eine Architekturentscheidung, die diskutiert und später als ADR dokumentiert werden soll
 title: "[ADR-Vorschlag] "
 labels:
-  - "type: adr"
+  - "adr"
 body:
   - type: markdown
     attributes:

@@ -2,7 +2,7 @@ name: "🔧 Chore"
 description: Aufgaben ohne direkten fachlichen Bezug (CI/CD, Doku, Tooling, Abhängigkeiten)
 title: "[Chore] "
 labels:
-  - "type: chore"
+  - "chore"
 body:
   - type: textarea
     id: description

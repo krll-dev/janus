@@ -2,7 +2,7 @@ name: "📖 Story"
 description: Eine fachliche oder technische Arbeitseinheit (User Story)
 title: "[Story] "
 labels:
-  - "type: story"
+  - "story"
 body:
   - type: markdown
     attributes:
