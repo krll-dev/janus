@@ -1,0 +1,74 @@
+name: "🏛️ ADR-Vorschlag"
+description: Eine Architekturentscheidung, die diskutiert und später als ADR dokumentiert werden soll
+title: "[ADR-Vorschlag] "
+labels:
+  - "adr"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Dieses Template ist für Architekturentscheidungen gedacht, die es wert sind, bewusst
+        abgewogen und später als ADR unter `docs/adr/` festgehalten zu werden — inklusive
+        Entscheidungen, bei denen ein KI-Vorschlag geprüft und ggf. verworfen wurde.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Kontext / Problem
+      description: Was ist die Ausgangslage? Welche Entscheidung muss getroffen werden?
+    validations:
+      required: true
+
+  - type: textarea
+    id: options
+    attributes:
+      label: Betrachtete Optionen
+      description: Liste der Alternativen inkl. kurzer Vor-/Nachteile
+      placeholder: |
+        1. Option A — Vorteil / Nachteil
+        2. Option B — Vorteil / Nachteil
+    validations:
+      required: true
+
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Tendenz / Empfehlung
+      description: Welche Option wird bevorzugt und warum?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: ai-involvement
+    attributes:
+      label: KI-Beteiligung an diesem Vorschlag
+      description: Transparenz für spätere AI-USAGE.md-Dokumentation
+      options:
+        - Keine — eigene Entscheidung
+        - KI-Vorschlag übernommen (nach Prüfung)
+        - KI-Vorschlag teilweise übernommen
+        - KI-Vorschlag geprüft und verworfen
+    validations:
+      required: true
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Betroffenes Modul (falls zutreffend)
+      options:
+        - policy
+        - inventory
+        - claim
+        - shared
+        - infra (CI/CD, Docker, Tooling)
+        - ui (Angular)
+        - übergreifend / Gesamtarchitektur
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: follow-up
+    attributes:
+      label: Nächste Schritte
+      options:
+        - label: Nach Entscheidung als ADR unter docs/adr/ dokumentieren

@@ -1,0 +1,74 @@
+name: "📖 Story"
+description: Eine fachliche oder technische Arbeitseinheit (User Story)
+title: "[Story] "
+labels:
+  - "story"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Nutze diese Vorlage für eine einzelne Story im Sinne von "Als ... möchte ich ... damit ...".
+        Trage die Story anschließend im Projekt-Board ein und setze die passenden Custom Fields (Priority, Module, Type).
+
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      description: "Als [Rolle] möchte ich [Ziel], damit [Nutzen]."
+      placeholder: |
+        Als Sachbearbeiter möchte ich eine Warnung erhalten, wenn der Bestandswert
+        die Versicherungssumme übersteigt, damit ich rechtzeitig eine Summenanpassung anstoßen kann.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Fachlicher Kontext / Hintergrund
+      description: Kurzer Bezug zur fachlichen Ausarbeitung (z. B. betroffene Geschäftsregel, Event, Glossarbegriff)
+      placeholder: "z. B. Bezug zu Geschäftsregel #13 (Unterversicherungs-Warnung), Event UnderinsuranceDetected"
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Akzeptanzkriterien
+      description: Checkliste — wann gilt die Story als fertig?
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+        - [ ] Tests decken den Fall ab
+    validations:
+      required: true
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Betroffenes Modul
+      description: Welches Spring-Modulith-Modul ist primär betroffen?
+      options:
+        - policy
+        - inventory
+        - claim
+        - shared
+        - infra (CI/CD, Docker, Tooling)
+        - ui (Angular)
+    validations:
+      required: true
+
+  - type: input
+    id: epic
+    attributes:
+      label: Zugehöriges Epic / Milestone
+      description: Verweis auf das übergeordnete Epic (Milestone) oder Parent-Issue
+      placeholder: "z. B. M1 – Backend-Kern, oder #12"
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notizen / offene Fragen
+    validations:
+      required: false

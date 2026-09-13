@@ -1,0 +1,47 @@
+name: "🔧 Chore"
+description: Aufgaben ohne direkten fachlichen Bezug (CI/CD, Doku, Tooling, Abhängigkeiten)
+title: "[Chore] "
+labels:
+  - "chore"
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Was ist zu tun?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Kategorie
+      options:
+        - CI/CD
+        - Dokumentation
+        - Tooling / Dev-Setup
+        - Abhängigkeiten / Updates
+        - Sonstiges
+    validations:
+      required: true
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Betroffenes Modul (falls zutreffend)
+      options:
+        - policy
+        - inventory
+        - claim
+        - shared
+        - infra (CI/CD, Docker, Tooling)
+        - ui (Angular)
+        - übergreifend
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notizen
+    validations:
+      required: false

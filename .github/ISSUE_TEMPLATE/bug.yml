@@ -1,0 +1,62 @@
+name: "🐛 Bug"
+description: Ein Fehlverhalten in bestehendem Code
+title: "[Bug] "
+labels:
+  - "bug"
+body:
+  - type: textarea
+    id: expected
+    attributes:
+      label: Erwartetes Verhalten
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Tatsächliches Verhalten
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduktionsschritte
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Betroffenes Modul
+      options:
+        - policy
+        - inventory
+        - claim
+        - shared
+        - infra (CI/CD, Docker, Tooling)
+        - ui (Angular)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Schweregrad
+      options:
+        - Niedrig (kosmetisch)
+        - Mittel (Workaround vorhanden)
+        - Hoch (blockiert Kernfunktion)
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Logs / Screenshots / zusätzlicher Kontext
+    validations:
+      required: false
