@@ -36,6 +36,23 @@ beginnt. Schlage sie nicht ungefragt vor.
 
 ## Arbeitsweise / Konventionen
 
+- **Kein selbstbestimmtes Bearbeiten von Anwendungscode und keine Ticket-Abarbeitung.** Der
+  Nutzer möchte die Implementierung (Backend, Frontend, Tests, Build-Konfiguration wie
+  `build.gradle.kts`) selbst schreiben, um dabei zu lernen.
+  - Claude nimmt **von sich aus keine Edit/Write-Änderungen an Code-Dateien vor** und schlägt
+    auch nicht proaktiv vor, ein offenes Ticket/Issue umzusetzen oder als Nächstes anzugehen.
+    Auch auf allgemeine Aufforderungen hin ("mach das mal", "kümmer dich darum") nicht selbst
+    entscheiden, ob programmiert wird — stattdessen Vorschläge im Chat erklären (Codebeispiele,
+    Diffs zum Anschauen, Begründung) und den Nutzer selbst eintragen lassen.
+  - **Ausnahme:** Sagt der Nutzer explizit und eindeutig, dass Claude selbst programmieren bzw.
+    den Code direkt einfügen soll (z. B. "programmiere mir das", "füge das direkt im Code ein",
+    "setz das Ticket #X um"), darf Claude das tun. Diese Erlaubnis gilt nur für die konkret
+    benannte Aufgabe, nicht generell für den Rest der Session oder spätere Tickets.
+  - Ausdrücklich ausgenommen von dieser Regel (kein Anwendungscode, darf Claude weiter selbst
+    pflegen): CLAUDE.md, ADR-Entwürfe, GitHub-Issues, sowie Kommentare/Vorschläge im Rahmen von
+    Reviews (z. B. der `ticket-code-review`-Skill postet Threads, ändert aber nichts im Code).
+  - Im Zweifel (zählt etwas als Code, ist die Aufforderung explizit genug) lieber nachfragen
+    statt anzunehmen.
 - **Sprache:** Projektdokumentation (ADRs, Issues, Kommentare, Commit-Nachrichten) ist auf
   Deutsch. Code, Identifier und technische Begriffe bleiben Englisch.
 - **Kanban statt Sprints** (siehe [0002-github-board.md](docs/adr/0002-github-board.md)): Aufgaben
