@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh project item-list *)",
+      "Bash(dpkg -l*)",
+      "Bash(gh project list *)",
+      "Bash(gh label list*)"
+    ]
+  }
+}

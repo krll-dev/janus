@@ -1,0 +1,1 @@
+-- Dient nur für die initiale Erstellung der Datenbank.
